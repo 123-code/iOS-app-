@@ -16,6 +16,10 @@
 		75F9A3772B2AA65E0092CD8B /* HoloiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A3762B2AA65E0092CD8B /* HoloiOSTests.swift */; };
 		75F9A3812B2AA65E0092CD8B /* HoloiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A3802B2AA65E0092CD8B /* HoloiOSUITests.swift */; };
 		75F9A3832B2AA65E0092CD8B /* HoloiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A3822B2AA65E0092CD8B /* HoloiOSUITestsLaunchTests.swift */; };
+		75F9A3972B2AA9FE0092CD8B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9A3962B2AA9FE0092CD8B /* AuthenticationServices.framework */; };
+		75F9A39A2B2AA9FE0092CD8B /* AccountAuthenticationModificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A3992B2AA9FE0092CD8B /* AccountAuthenticationModificationViewController.swift */; };
+		75F9A39D2B2AA9FE0092CD8B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F9A39B2B2AA9FE0092CD8B /* MainInterface.storyboard */; };
+		75F9A3A12B2AA9FE0092CD8B /* authholo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75F9A3942B2AA9FE0092CD8B /* authholo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +37,28 @@
 			remoteGlobalIDString = 75F9A35B2B2AA65A0092CD8B;
 			remoteInfo = HoloiOS;
 		};
+		75F9A39F2B2AA9FE0092CD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75F9A3542B2AA65A0092CD8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75F9A3932B2AA9FE0092CD8B;
+			remoteInfo = authholo;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		75F9A3A52B2AA9FE0092CD8B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				75F9A3A12B2AA9FE0092CD8B /* authholo.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		75F9A35C2B2AA65A0092CD8B /* HoloiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +74,12 @@
 		75F9A37C2B2AA65E0092CD8B /* HoloiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F9A3802B2AA65E0092CD8B /* HoloiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloiOSUITests.swift; sourceTree = "<group>"; };
 		75F9A3822B2AA65E0092CD8B /* HoloiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75F9A38F2B2AA6960092CD8B /* HoloiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HoloiOS.entitlements; sourceTree = "<group>"; };
+		75F9A3942B2AA9FE0092CD8B /* authholo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = authholo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F9A3962B2AA9FE0092CD8B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		75F9A3992B2AA9FE0092CD8B /* AccountAuthenticationModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthenticationModificationViewController.swift; sourceTree = "<group>"; };
+		75F9A39C2B2AA9FE0092CD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		75F9A39E2B2AA9FE0092CD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +104,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75F9A3912B2AA9FE0092CD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9A3972B2AA9FE0092CD8B /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +121,8 @@
 				75F9A35E2B2AA65A0092CD8B /* HoloiOS */,
 				75F9A3752B2AA65E0092CD8B /* HoloiOSTests */,
 				75F9A37F2B2AA65E0092CD8B /* HoloiOSUITests */,
+				75F9A3982B2AA9FE0092CD8B /* authholo */,
+				75F9A3952B2AA9FE0092CD8B /* Frameworks */,
 				75F9A35D2B2AA65A0092CD8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +133,7 @@
 				75F9A35C2B2AA65A0092CD8B /* HoloiOS.app */,
 				75F9A3722B2AA65E0092CD8B /* HoloiOSTests.xctest */,
 				75F9A37C2B2AA65E0092CD8B /* HoloiOSUITests.xctest */,
+				75F9A3942B2AA9FE0092CD8B /* authholo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +141,7 @@
 		75F9A35E2B2AA65A0092CD8B /* HoloiOS */ = {
 			isa = PBXGroup;
 			children = (
+				75F9A38F2B2AA6960092CD8B /* HoloiOS.entitlements */,
 				75F9A35F2B2AA65A0092CD8B /* AppDelegate.swift */,
 				75F9A3612B2AA65A0092CD8B /* SceneDelegate.swift */,
 				75F9A3632B2AA65A0092CD8B /* ViewController.swift */,
@@ -127,6 +170,24 @@
 			path = HoloiOSUITests;
 			sourceTree = "<group>";
 		};
+		75F9A3952B2AA9FE0092CD8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75F9A3962B2AA9FE0092CD8B /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75F9A3982B2AA9FE0092CD8B /* authholo */ = {
+			isa = PBXGroup;
+			children = (
+				75F9A3992B2AA9FE0092CD8B /* AccountAuthenticationModificationViewController.swift */,
+				75F9A39B2B2AA9FE0092CD8B /* MainInterface.storyboard */,
+				75F9A39E2B2AA9FE0092CD8B /* Info.plist */,
+			);
+			path = authholo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +198,12 @@
 				75F9A3582B2AA65A0092CD8B /* Sources */,
 				75F9A3592B2AA65A0092CD8B /* Frameworks */,
 				75F9A35A2B2AA65A0092CD8B /* Resources */,
+				75F9A3A52B2AA9FE0092CD8B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				75F9A3A02B2AA9FE0092CD8B /* PBXTargetDependency */,
 			);
 			name = HoloiOS;
 			productName = HoloiOS;
@@ -183,6 +246,23 @@
 			productReference = 75F9A37C2B2AA65E0092CD8B /* HoloiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		75F9A3932B2AA9FE0092CD8B /* authholo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F9A3A22B2AA9FE0092CD8B /* Build configuration list for PBXNativeTarget "authholo" */;
+			buildPhases = (
+				75F9A3902B2AA9FE0092CD8B /* Sources */,
+				75F9A3912B2AA9FE0092CD8B /* Frameworks */,
+				75F9A3922B2AA9FE0092CD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = authholo;
+			productName = authholo;
+			productReference = 75F9A3942B2AA9FE0092CD8B /* authholo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +284,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 75F9A35B2B2AA65A0092CD8B;
 					};
+					75F9A3932B2AA9FE0092CD8B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 75F9A3572B2AA65A0092CD8B /* Build configuration list for PBXProject "HoloiOS" */;
@@ -222,6 +305,7 @@
 				75F9A35B2B2AA65A0092CD8B /* HoloiOS */,
 				75F9A3712B2AA65E0092CD8B /* HoloiOSTests */,
 				75F9A37B2B2AA65E0092CD8B /* HoloiOSUITests */,
+				75F9A3932B2AA9FE0092CD8B /* authholo */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +332,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F9A3922B2AA9FE0092CD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9A39D2B2AA9FE0092CD8B /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +373,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75F9A3902B2AA9FE0092CD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9A39A2B2AA9FE0092CD8B /* AccountAuthenticationModificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +393,11 @@
 			isa = PBXTargetDependency;
 			target = 75F9A35B2B2AA65A0092CD8B /* HoloiOS */;
 			targetProxy = 75F9A37D2B2AA65E0092CD8B /* PBXContainerItemProxy */;
+		};
+		75F9A3A02B2AA9FE0092CD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75F9A3932B2AA9FE0092CD8B /* authholo */;
+			targetProxy = 75F9A39F2B2AA9FE0092CD8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -311,6 +416,14 @@
 				75F9A36B2B2AA65E0092CD8B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		75F9A39B2B2AA9FE0092CD8B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75F9A39C2B2AA9FE0092CD8B /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -435,10 +548,13 @@
 		75F9A3872B2AA65E0092CD8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HoloiOS/HoloiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5GR6QGN66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HoloiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -462,10 +578,13 @@
 		75F9A3882B2AA65E0092CD8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HoloiOS/HoloiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5GR6QGN66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HoloiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -558,6 +677,56 @@
 			};
 			name = Release;
 		};
+		75F9A3A32B2AA9FE0092CD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5GR6QGN66;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = authholo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = authholo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.HoloiOS.authholo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75F9A3A42B2AA9FE0092CD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C5GR6QGN66;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = authholo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = authholo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.HoloiOS.authholo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +762,15 @@
 			buildConfigurations = (
 				75F9A38D2B2AA65E0092CD8B /* Debug */,
 				75F9A38E2B2AA65E0092CD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F9A3A22B2AA9FE0092CD8B /* Build configuration list for PBXNativeTarget "authholo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F9A3A32B2AA9FE0092CD8B /* Debug */,
+				75F9A3A42B2AA9FE0092CD8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
