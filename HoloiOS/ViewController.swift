@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         view.addSubview(titlelabel)
         view.addSubview(subtitlelabel)
         view.addSubview(signInButton)
+        signInButton.addTarget(self,action:#selector(didTapSignIn),for:.touchUpInside)
         // Do any additional setup after loading the view.
     }
     
@@ -44,7 +45,49 @@ class ViewController: UIViewController {
         signInButton.frame = CGRect(x:0,y:10,width:250,height:50)
         signInButton.center=view.center
     }
-
+    
+    @objc func didTapSignIn(){
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.fullName,.email]
+        
+        let controller = ASAuthorizationController(authorizationRequests:[request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
 
 }
+
+}
+
+
+extension ViewController: ASAuthorizationControllerDelegate{
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        
+        print("Failed")
+    }
+     
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+   
+        switch authorization.credential{
+        case let credentials as ASAuthorizationAppleIDCredential:
+            let firstName = credentials.fullName?.givenName
+            let lastName = credentials.fullName?.familyName
+            let email = credentials.email
+            
+            break
+        default:
+            break
+        }
+    }
+}
+
+
+extension ViewController: ASAuthorizationControllerPresentationContextProviding{
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+ 
+        return view.window!
+    }
+}
+
 
