@@ -34,16 +34,24 @@ class ViewController: UIViewController {
         view.addSubview(titlelabel)
         view.addSubview(subtitlelabel)
         view.addSubview(signInButton)
+        let lightBlue = UIColor(red: 0.88, green: 0.93, blue: 5.00, alpha: 2.0)
+        view.backgroundColor = lightBlue
         signInButton.addTarget(self,action:#selector(didTapSignIn),for:.touchUpInside)
         // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        titlelabel.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 50)
-        subtitlelabel.frame = CGRect(x: 10, y: 200, width: view.frame.width, height: 50)
-        signInButton.frame = CGRect(x:0,y:10,width:250,height:50)
-        signInButton.center=view.center
+      super.viewDidLayoutSubviews()
+
+      titlelabel.frame = CGRect(x: 0, y: 200, width: view.frame.width, height: 50)
+      titlelabel.textAlignment = .center
+
+      subtitlelabel.frame = CGRect(x: 0, y: 300, width: view.frame.width, height: 50)
+      subtitlelabel.textAlignment = .center
+
+      signInButton.frame = CGRect(x:0,y:10,width:250,height:50)
+      signInButton.center=view.center
+
     }
     
     @objc func didTapSignIn(){
