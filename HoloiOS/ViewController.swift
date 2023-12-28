@@ -15,6 +15,8 @@ class MyCell: UICollectionViewCell{
     let imageView = UIImageView()
     override init(frame:CGRect){
         super.init(frame:frame)
+        imageView.layer.cornerRadius = frame.width / 2
+            imageView.clipsToBounds = true
         addSubview(imageView)
         
     }
@@ -32,6 +34,17 @@ class MyCell: UICollectionViewCell{
 class ViewController: UIViewController,PHPickerViewControllerDelegate, UICollectionViewDataSource{
 
     
+    private let nextButton: UIButton = {
+          let button = UIButton(type: .system)
+          button.setTitle("Next", for: .normal)
+          button.setTitleColor(.white, for: .normal)
+          button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+          button.backgroundColor = .black
+          button.layer.cornerRadius = 10
+          // Add target action for addImageTapped method
+          button.addTarget(self, action: #selector(addImageTapped), for: .touchUpInside)
+          return button
+      }()
     
     private let collectionView:UICollectionView = {
         
@@ -40,7 +53,8 @@ class ViewController: UIViewController,PHPickerViewControllerDelegate, UICollect
         let c = UICollectionView(
         frame:.zero,collectionViewLayout:layout
         )
-        c.backgroundColor = .red
+        let lightBlue = UIColor(red: 0.88, green: 0.93, blue: 5.00, alpha: 2.0)
+        c.backgroundColor = lightBlue
         c.register(MyCell.self,forCellWithReuseIdentifier:"cell")
         return c
         
@@ -49,10 +63,43 @@ class ViewController: UIViewController,PHPickerViewControllerDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
+    
         collectionView.dataSource = self
         collectionView.frame=view.bounds
-        title = "New Photo Picker "
+        title = "Holo Photo Picker "
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:.add  ,target: self, action:#selector(didTapAdd))
+        
+   
+        view.addSubview(nextButton)
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+               NSLayoutConstraint.activate([
+                   nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                   nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                   nextButton.widthAnchor.constraint(equalToConstant: 200), // Set width
+                   nextButton.heightAnchor.constraint(equalToConstant: 50)
+                
+               ])
+        if let futuraFont = UIFont(name: "Futura", size: 16) { // Replace "Futura" with your desired font name
+                    nextButton.titleLabel?.font = futuraFont
+                }
+    }
+    
+    @objc func addImageTapped(){
+        let loadingView = UIActivityIndicatorView(style: .large)
+        loadingView.color = .gray
+        loadingView.startAnimating()
+        nextButton.addSubview(loadingView)
+        loadingView.center = CGPoint(x: nextButton.bounds.width / 2, y: nextButton.bounds.height / 2)
+        
+        DispatchQueue.main.asyncAfter(deadline:.now()+2.0){
+            loadingView.stopAnimating()
+            loadingView.removeFromSuperview()
+            self.nextButton.isEnabled = true
+            let frame = CGRect(x: 0, y: 0, width: 200, height: 300)
+            let nextVC = FinishMemController(frame: frame)
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        
+        }
     }
     
     
@@ -88,6 +135,7 @@ class ViewController: UIViewController,PHPickerViewControllerDelegate, UICollect
         group.notify(queue:.main){
             print(self.images.count)
             self.collectionView.reloadData()
+            uploadImages(self.images)
         }
         
     }
