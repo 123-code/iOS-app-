@@ -8,58 +8,61 @@
 import UIKit
 
 class FinishMemController: UIViewController {
+    let datePicker = UIDatePicker()
+    let textField = UITextField()
+    let textField2 = UITextField()
+    let label1 = UILabel()
+    let label2 = UILabel()
 
-    let imageView = UIImageView()
-    let dateLabel = UILabel()
-    let titleLabel = UILabel()
-    let contextTextView = UITextView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        datePicker.isUserInteractionEnabled = false
+        textField.isUserInteractionEnabled = false
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        datePicker.isUserInteractionEnabled = true
+        textField.isUserInteractionEnabled = true
+    }
 
     var date: Date? {
         didSet {
             if let date = date {
-                dateLabel.text = date.formatted()
+                // Perform date formatting or update label/textField here
             }
         }
     }
-    
-    override var title: String? {
-        didSet {
-            titleLabel.text = title
-        }
-    }
-    
-    var context: String? {
-        didSet {
-            contextTextView.text = context
-        }
-    }
 
-     init(frame:CGRect) {
-        super.init(nibName: nil, bundle: nil)
-        
-        // Round image view
-        imageView.layer.cornerRadius = frame.width / 2
-        imageView.clipsToBounds = true
-        
-        // Date label
-        dateLabel.font = .systemFont(ofSize: 12)
-        dateLabel.textColor = .secondaryLabel
-        
-        // Title label
-        titleLabel.font = .boldSystemFont(ofSize: 16)
-        
-        // Context text view
-        contextTextView.font = .systemFont(ofSize: 14)
-        contextTextView.isEditable = false
-        contextTextView.isScrollEnabled = false
-        
-        // Layout
-        // ...add dateLabel, titleLabel, contextTextView
-    
-    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let lightBlue = UIColor(red: 0.88, green: 0.93, blue: 5.00, alpha: 2.0)
+        view.backgroundColor = lightBlue
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+        // Date Picker
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.frame = CGRect(x: 20, y: view.safeAreaInsets.top + 100, width: view.frame.width - 40, height: 200)
+        view.addSubview(datePicker)
 
+        // Label 1 (Field 1)
+        label1.text = "Field 1"
+        label1.frame = CGRect(x: 20, y: datePicker.frame.maxY + 20, width: 100, height: 30)
+        view.addSubview(label1)
+
+        // Text Field 1
+        textField.borderStyle = .roundedRect
+        textField.frame = CGRect(x: 20, y: label1.frame.maxY + 8, width: view.frame.width - 40, height: 30)
+        view.addSubview(textField)
+
+        // Label 2 (Field 2)
+        label2.text = "Field 2"
+        label2.frame = CGRect(x: 20, y: textField.frame.maxY + 20, width: 100, height: 30)
+        view.addSubview(label2)
+
+        // Text Field 2
+        textField2.borderStyle = .roundedRect
+        textField2.frame = CGRect(x: 20, y: label2.frame.maxY + 8, width: view.frame.width - 40, height: 30)
+        view.addSubview(textField2)
+    }
 }

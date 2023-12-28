@@ -96,7 +96,7 @@ class ViewController: UIViewController,PHPickerViewControllerDelegate, UICollect
             loadingView.removeFromSuperview()
             self.nextButton.isEnabled = true
             let frame = CGRect(x: 0, y: 0, width: 200, height: 300)
-            let nextVC = FinishMemController(frame: frame)
+            let nextVC = FinishMemController()
             self.navigationController?.pushViewController(nextVC, animated: true)
         
         }
