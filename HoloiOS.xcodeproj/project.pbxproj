@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		725DFA842B3B7AF8007E8CDA /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DFA832B3B7AF8007E8CDA /* UploadImage.swift */; };
+		725DFA862B3CBDEF007E8CDA /* FinishMemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DFA852B3CBDEF007E8CDA /* FinishMemController.swift */; };
 		75F9A3602B2AA65A0092CD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A35F2B2AA65A0092CD8B /* AppDelegate.swift */; };
 		75F9A3622B2AA65A0092CD8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A3612B2AA65A0092CD8B /* SceneDelegate.swift */; };
 		75F9A3642B2AA65A0092CD8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9A3632B2AA65A0092CD8B /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		725DFA832B3B7AF8007E8CDA /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		725DFA852B3CBDEF007E8CDA /* FinishMemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMemController.swift; sourceTree = "<group>"; };
 		75F9A35C2B2AA65A0092CD8B /* HoloiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F9A35F2B2AA65A0092CD8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75F9A3612B2AA65A0092CD8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				75F9A36A2B2AA65E0092CD8B /* LaunchScreen.storyboard */,
 				75F9A36D2B2AA65E0092CD8B /* Info.plist */,
 				725DFA832B3B7AF8007E8CDA /* UploadImage.swift */,
+				725DFA852B3CBDEF007E8CDA /* FinishMemController.swift */,
 			);
 			path = HoloiOS;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				75F9A3602B2AA65A0092CD8B /* AppDelegate.swift in Sources */,
 				725DFA842B3B7AF8007E8CDA /* UploadImage.swift in Sources */,
 				75F9A3A82B3138000092CD8B /* WelcomeController.swift in Sources */,
+				725DFA862B3CBDEF007E8CDA /* FinishMemController.swift in Sources */,
 				75F9A3622B2AA65A0092CD8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
