@@ -105,7 +105,7 @@ class ViewController: UIViewController,PHPickerViewControllerDelegate, UICollect
     
     @objc private func didTapAdd(){
         var config = PHPickerConfiguration(photoLibrary: .shared())
-        config.selectionLimit = 3
+        config.selectionLimit = 10
         config.filter = .images //PHPickerFilter.any(of:[.images])
         let vc = PHPickerViewController(configuration: config)
         vc.delegate = self
