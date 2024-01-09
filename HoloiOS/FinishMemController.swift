@@ -49,7 +49,6 @@ class FinishMemController: UIViewController {
         label1.text = "Field 1"
         label1.frame = CGRect(x: 20, y: datePicker.frame.maxY + 20, width: 100, height: 30)
         view.addSubview(label1)
-
         // Text Field 1
         textField.borderStyle = .roundedRect
         textField.frame = CGRect(x: 20, y: label1.frame.maxY + 8, width: view.frame.width - 40, height: 30)
